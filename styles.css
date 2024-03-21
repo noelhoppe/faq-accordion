@@ -53,7 +53,7 @@ main {
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 60rem;
 }
 
 header {
@@ -90,16 +90,22 @@ summary {
     display: flex;
     justify-content: space-between;
 }
+/* multiple browser support */
+summary::-webkit-details-marker {
+    display: none;
+}
 
 summary:after {
     content: "";
-    background: url("assets/images/icon-plus.svg");
+    background-size: 100%;
+    background: url("assets/images/icon-plus.svg") no-repeat right;
     height: 31px;
-    width: 30px;    /* image's width and height in px */
+    width: 30px;
+    padding-left: 30px;
 }
 
 details[open] summary:after {
-    background: url("assets/images/icon-minus.svg");
+    background: url("assets/images/icon-minus.svg") no-repeat right;
 }
 
 p {
